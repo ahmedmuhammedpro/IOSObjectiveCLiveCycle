@@ -14,10 +14,26 @@
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey,id> *)launchOptions {
+    printf("willFinishLaunchingWithOptions\n");
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    printf("didFinishLaunchingWithOptions\n");
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    printf("applicationDidBecomeActive\n");
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    printf("applicationWillResignActive\n");
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    printf("applicationDidEnterBackground\n");
 }
 
 
